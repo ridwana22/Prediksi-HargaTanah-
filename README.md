@@ -1,7 +1,3 @@
-Berarti kamu mau README ini lebih sesuai standar README di GitHub — biasanya lebih ringkas, rapi, pakai heading yang jelas, ada badge (opsional), dan ada instruksi instalasi yang terstruktur. Berikut versi yang sudah aku sesuaikan:
-
----
-
 # 🌍 Aplikasi Prediksi Harga Tanah dengan IDW
 
 Aplikasi web interaktif berbasis **Streamlit** untuk memprediksi harga tanah menggunakan metode interpolasi **Inverse Distance Weighting (IDW)**, dilengkapi dengan visualisasi interaktif menggunakan **Folium**.
