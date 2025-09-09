@@ -1,11 +1,112 @@
-🌍 Aplikasi Prediksi Harga Tanah dengan IDWAplikasi web interaktif yang dibangun dengan Streamlit untuk memprediksi harga tanah menggunakan metode interpolasi Inverse Distance Weighting (IDW) dan memvisualisasikannya di peta Folium.Fitur UtamaUnggah Data: Pengguna dapat mengunggah data harga tanah dalam format CSV.Pembersihan Data Otomatis: Aplikasi secara otomatis membersihkan data, memvalidasi koordinat, menangani nilai yang hilang, dan memfilter outlier.Parameter Interaktif: Sesuaikan parameter IDW seperti pangkat (p), metode jarak (Haversine/Euclidean), dan jumlah tetangga (k) melalui sidebar.Visualisasi Peta:Peta interaktif menggunakan Folium dengan pilihan basemap dari Google (Maps, Satellite, Hybrid).Tampilan titik data acuan asli.Heatmap yang menunjukkan sebaran prediksi harga di seluruh area.Prediksi Titik Baru:Lakukan prediksi untuk satu lokasi dengan mengisi form.Lakukan prediksi untuk banyak lokasi (batch) dengan mengunggah CSV atau memasukkan data teks.Ekspor Hasil: Unduh hasil prediksi grid dan prediksi batch sebagai file CSV.Struktur Proyek.
+Berarti kamu mau README ini lebih sesuai standar README di GitHub — biasanya lebih ringkas, rapi, pakai heading yang jelas, ada badge (opsional), dan ada instruksi instalasi yang terstruktur. Berikut versi yang sudah aku sesuaikan:
+
+---
+
+# 🌍 Aplikasi Prediksi Harga Tanah dengan IDW
+
+Aplikasi web interaktif berbasis **Streamlit** untuk memprediksi harga tanah menggunakan metode interpolasi **Inverse Distance Weighting (IDW)**, dilengkapi dengan visualisasi interaktif menggunakan **Folium**.
+
+---
+
+## ✨ Fitur Utama
+
+* 📂 **Unggah Data**: Upload dataset harga tanah dalam format CSV.
+* 🧹 **Pembersihan Data Otomatis**: Validasi koordinat, tangani nilai hilang, dan filter outlier.
+* ⚙️ **Parameter Interaktif**: Atur parameter IDW di sidebar:
+
+  * Pangkat (*p*)
+  * Metode jarak (*Haversine / Euclidean*)
+  * Jumlah tetangga (*k*)
+* 🗺️ **Visualisasi Peta**:
+
+  * Peta interaktif Folium dengan basemap Google (Maps, Satellite, Hybrid).
+  * Titik data acuan asli.
+  * Heatmap sebaran prediksi harga.
+* 📍 **Prediksi Titik Baru**:
+
+  * Input lokasi tunggal melalui form.
+  * Prediksi batch melalui CSV atau input teks.
+* 💾 **Ekspor Hasil**: Unduh hasil prediksi grid dan batch dalam format CSV.
+
+---
+
+## 📂 Struktur Proyek
+
+```bash
+.
 ├── app.py                # Kode utama aplikasi Streamlit
 ├── requirements.txt      # Daftar pustaka Python yang dibutuhkan
 ├── data/
-│   └── contoh_data.csv   # Contoh file data untuk diunggah
-└── README.md             # File ini
-Cara Menjalankan AplikasiPastikan Python TerinstalPastikan Anda memiliki Python 3.10 atau versi yang lebih baru terinstal di sistem Anda.Buat Lingkungan Virtual (Opsional tapi Direkomendasikan)python -m venv venv
-source venv/bin/activate  # Di Windows, gunakan: venv\Scripts\activate
-Instal Pustaka yang DiperlukanNavigasikan ke direktori proyek dan jalankan perintah berikut di terminal Anda:pip install -r requirements.txt
-Jalankan Aplikasi StreamlitSetelah instalasi selesai, jalankan aplikasi dengan perintah:streamlit run app.py
-Buka di BrowserAplikasi akan otomatis terbuka di browser web default Anda. Jika tidak, buka browser dan navigasikan ke alamat URL yang ditampilkan di terminal (biasanya http://localhost:8501).Selamat mencoba!
+│   └── contoh_data.csv   # Contoh file data
+└── README.md             # Dokumentasi proyek
+```
+
+---
+
+## 🚀 Cara Menjalankan
+
+### 1. Persiapan
+
+Pastikan sudah terinstal **Python 3.10+** di sistem Anda.
+
+### 2. Buat Virtual Environment (opsional tapi direkomendasikan)
+
+```bash
+python -m venv venv
+```
+
+Aktifkan environment:
+
+* **Windows**
+
+  ```bash
+  venv\Scripts\activate
+  ```
+* **Linux / macOS**
+
+  ```bash
+  source venv/bin/activate
+  ```
+
+### 3. Instalasi Dependensi
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Jalankan Aplikasi
+
+```bash
+streamlit run app.py
+```
+
+### 5. Akses di Browser
+
+Aplikasi akan terbuka otomatis di browser. Jika tidak, buka URL berikut secara manual:
+👉 [http://localhost:8501](http://localhost:8501)
+
+---
+
+## 📊 Contoh Dataset
+
+File contoh tersedia di folder [`data/contoh_data.csv`](data/contoh_data.csv).
+
+Format minimal:
+
+```csv
+latitude,longitude,harga
+-6.200,106.816,5000000
+-6.210,106.820,5200000
+```
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+* [Streamlit](https://streamlit.io/)
+* [Pandas](https://pandas.pydata.org/)
+* [NumPy](https://numpy.org/)
+* [Folium](https://python-visualization.github.io/folium/)
+* [streamlit-folium](https://github.com/randyzwitch/streamlit-folium)
+
+---
